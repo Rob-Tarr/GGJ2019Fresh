@@ -38,4 +38,9 @@ public class EnemyMovement : MonoBehaviour
     {
         return myRigidbody.velocity.x > 0;
     }
+
+    public void Die()
+    {
+
+    }
 }

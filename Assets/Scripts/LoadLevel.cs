@@ -39,7 +39,7 @@ public class LoadLevel : MonoBehaviour
 
         if(roomName == ("Kitchen"))
         {
-            GameObject.FindGameObjectWithTag("Kitchen").GetComponent<MusicClass>().PlayMusic();
+            GameObject.FindGameObjectWithTag("Kitchen").GetComponent<MusicClass>().StopMusic();
             SceneManager.LoadScene("05 Level 2");
         }
 

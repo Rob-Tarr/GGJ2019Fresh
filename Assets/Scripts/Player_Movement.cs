@@ -26,6 +26,7 @@ public class Player_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        attackCollider.gameObject.SetActive(false);
         MyRB = gameObject.GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         GroundCheck = gameObject.transform.GetChild(0); //first and second child should correspond to ground and wall check
@@ -114,7 +115,7 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetButtonUp("Fire"))
         {
             myAnimator.SetBool("isAttacking", false);
-            attackCollider.SetActive(true);
+            attackCollider.SetActive(false);
         }
     }
 }

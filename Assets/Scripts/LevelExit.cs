@@ -36,7 +36,7 @@ public class LevelExit : MonoBehaviour
 
         if (roomName == ("Kitchen"))
         {
-            GameObject.FindGameObjectWithTag("Kitchen_L").GetComponent<MusicClass>().PlayMusic();
+            //GameObject.FindGameObjectWithTag("Kitchen_L").GetComponent<MusicClass>().StopMusic();
             SceneManager.LoadScene("04 Kitchen");
         }
 

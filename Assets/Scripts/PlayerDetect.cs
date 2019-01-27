@@ -5,11 +5,15 @@ using UnityEngine;
 public class PlayerDetect : MonoBehaviour
 {
     Rigidbody2D myRigidbody;
-    
+    public GameObject myEnemy;
+    public Plate myPlate;
+   
+
     // Start is called before the first frame update
     void Start()
     {
         myRigidbody = GetComponentInParent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
@@ -18,6 +22,8 @@ public class PlayerDetect : MonoBehaviour
         
     }
 
+
+ 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -32,22 +38,19 @@ public class PlayerDetect : MonoBehaviour
 
         if(collision.tag == "Plate")
         {
-            Plate myPlate;
 
             myPlate = collision.GetComponent<Plate>();
-            myPlate.numberOfEnemies++;
+            myPlate.IncreaseEnemyCount();
+            
         }
 
         if(collision.tag == "Attack")
         {
-            Plate myPlate;
+            Debug.Log("TOUCHINGGGG");
 
-            myPlate = collision.GetComponent<Plate>();
-            myPlate.numberOfEnemies--;
-
-            GameObject gameObject;
-            gameObject = GetComponentInParent<GameObject>();
-            gameObject.SetActive(false);
+            myPlate.DecreaseEnemyCount();
+            Destroy(myEnemy);
+            
         }
     }
 

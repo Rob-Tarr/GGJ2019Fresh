@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Plate : MonoBehaviour
 {
+    
+    
 
     public int numberOfEnemies;
 
@@ -18,7 +20,7 @@ public class Plate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        ClearPlate();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -35,5 +37,15 @@ public class Plate : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void IncreaseEnemyCount()
+    {
+        numberOfEnemies++;
+    }
+
+    public void DecreaseEnemyCount()
+    {
+        numberOfEnemies--;
     }
 }
