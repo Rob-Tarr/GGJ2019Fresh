@@ -47,6 +47,8 @@ public class LoadLevel : MonoBehaviour
 
         if(roomName == ("Laundry"))
         {
+            GameObject.FindGameObjectWithTag("Outside").GetComponent<MusicClass>().StopMusic();
+            Destroy(GameObject.FindGameObjectWithTag("Outside"));
             SceneManager.LoadScene("07 Level 3");
         }
     }
