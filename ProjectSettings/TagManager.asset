@@ -4,17 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
-  - Wall
   - Plate
-  - Attack
-=======
-  - Music
-  - Living
-  - Kitchen
-  - Living_L
-  - Kitchen_L
->>>>>>> d9f0f237b538840e15839f6a29e3ff001c1ce61a
   layers:
   - Default
   - TransparentFX
@@ -24,8 +14,8 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
-  - Wall
+  - 
+  - 
   - 
   - 
   - 
@@ -51,10 +41,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Lava
-    uniqueID: 2721910203
-    locked: 0
-  - name: Background
-    uniqueID: 2362607669
     locked: 0
