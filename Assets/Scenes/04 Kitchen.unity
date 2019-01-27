@@ -124,6 +124,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music
       objectReference: {fileID: 0}
+    - target: {fileID: 1732344646445535695, guid: 5b7cca1d62953d94a92dd7bb55bd349c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Kitchen
+      objectReference: {fileID: 0}
     - target: {fileID: 1732344646445535692, guid: 5b7cca1d62953d94a92dd7bb55bd349c,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -9,10 +9,11 @@ public class Fall : MonoBehaviour
 
     private void Start()
     {
-        myAudioSource = FindObjectOfType<AudioSource>();
+        
     }
     void OnTriggerEnter2D(Collider2D Other)
     {
+        myAudioSource = FindObjectOfType<AudioSource>();
         if (Other.name == "Player")
         {
             myAudioSource.Stop();

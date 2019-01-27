@@ -31,12 +31,14 @@ public class LevelExit : MonoBehaviour
         if (roomName == ("Living Room"))
         {
             GameObject.FindGameObjectWithTag("Living_L").GetComponent<MusicClass>().StopMusic();
+            Destroy(GameObject.FindGameObjectWithTag("Living_L"));
             SceneManager.LoadScene("02 Living Room");
         }
 
         if (roomName == ("Kitchen"))
         {
             GameObject.FindGameObjectWithTag("Kitchen_L").GetComponent<MusicClass>().PlayMusic();
+            Destroy(GameObject.FindGameObjectWithTag("Kitchen_L"));
             SceneManager.LoadScene("04 Kitchen");
         }
 
