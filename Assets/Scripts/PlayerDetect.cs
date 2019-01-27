@@ -34,7 +34,8 @@ public class PlayerDetect : MonoBehaviour
         if (collision.name == "Player")
         {
 
-            GameObject.FindObjectOfType<AudioSource>().GetComponent<MusicClass>().StopMusic();
+            GameObject.FindGameObjectWithTag("Kitchen_L").GetComponent<MusicClass>().StopMusic();
+            Destroy(GameObject.FindGameObjectWithTag("Kitchen_L"));
             Application.LoadLevel(Application.loadedLevel);
 
         }
