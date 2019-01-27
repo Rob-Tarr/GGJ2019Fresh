@@ -23,12 +23,25 @@ public class LevelExit : MonoBehaviour
     {
         if(collision.name == "Player")
         {
-
+            DetectRoom();
         }
     }
 
     private void DetectRoom()
     {
-        //shit
+        if (roomName == ("Living Room"))
+        {
+            SceneManager.LoadScene("02 Living Room");
+        }
+
+        if (roomName == ("Kitchen"))
+        {
+            SceneManager.LoadScene("04 Kitchen");
+        }
+
+        if (roomName == ("Laundry"))
+        {
+            SceneManager.LoadScene("06 Laundry Room");
+        }
     }
 }
