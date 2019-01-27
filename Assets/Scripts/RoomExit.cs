@@ -23,8 +23,6 @@ public class RoomExit : MonoBehaviour
     private void OnMouseUp()
     {
         DetectRoom();
-
-        
     }
 
     private void OnMouseOver()
@@ -34,14 +32,15 @@ public class RoomExit : MonoBehaviour
 
     private void DetectRoom()
     {
-
-        if(roomName == ("Bedroom"))
+        if (roomName == ("Bedroom"))
         {
-            SceneManager.LoadScene("02 Living Room");
+            GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().StopMusic();
+            SceneManager.LoadScene("02 Living Room");  
         }
 
         if (roomName == ("Living"))
         {
+            GameObject.FindGameObjectWithTag("Living").GetComponent<MusicClass>().StopMusic();
             SceneManager.LoadScene("04 Kitchen");
         }
 
