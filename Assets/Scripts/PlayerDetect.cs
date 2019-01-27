@@ -33,7 +33,10 @@ public class PlayerDetect : MonoBehaviour
         }
         if (collision.name == "Player")
         {
+
+            GameObject.FindObjectOfType<AudioSource>().GetComponent<MusicClass>().StopMusic();
             Application.LoadLevel(Application.loadedLevel);
+
         }
 
         if(collision.tag == "Plate")

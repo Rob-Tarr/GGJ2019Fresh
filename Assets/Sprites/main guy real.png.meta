@@ -96,10 +96,10 @@ TextureImporter:
       name: main guy real_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 26
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,7 +107,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 758c850209d68c447b2db2756c009c64
+      spriteID: acccf44beb021e14480aa2ab2a9f07f7
       vertices: []
       indices: 
       edges: []
@@ -116,10 +116,10 @@ TextureImporter:
       name: main guy real_1
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 0
-        width: 25
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,7 +127,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8e9910291be8034393ba9101f2ff47f
+      spriteID: 90d547abbe369a94c947a429ea4fd14c
       vertices: []
       indices: 
       edges: []
@@ -136,10 +136,10 @@ TextureImporter:
       name: main guy real_2
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 0
-        width: 26
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,7 +147,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dd514864a7794443926b962efee73ed
+      spriteID: 344382cc36c1df94c8bf40a99f373d85
       vertices: []
       indices: 
       edges: []
@@ -156,10 +156,10 @@ TextureImporter:
       name: main guy real_3
       rect:
         serializedVersion: 2
-        x: 98
+        x: 96
         y: 0
-        width: 25
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,7 +167,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f77162b07b8e2e4498994ee2ffca4930
+      spriteID: 9605a9744c8c5004996dae0b662df3eb
       vertices: []
       indices: 
       edges: []
@@ -176,10 +176,10 @@ TextureImporter:
       name: main guy real_4
       rect:
         serializedVersion: 2
-        x: 129
+        x: 128
         y: 0
-        width: 26
-        height: 30
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,7 +187,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d715d4ccbdb3254da694a06d5960c48
+      spriteID: 689ffde0686adf949a67ff4f657cb7c6
       vertices: []
       indices: 
       edges: []
@@ -196,9 +196,9 @@ TextureImporter:
       name: main guy real_5
       rect:
         serializedVersion: 2
-        x: 164
+        x: 160
         y: 0
-        width: 23
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -207,7 +207,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d18523300ea50ef4b9d4e73ef0b48d57
+      spriteID: dec18fbcf00a6e5429abe5a1dacbf29b
       vertices: []
       indices: 
       edges: []
@@ -216,9 +216,9 @@ TextureImporter:
       name: main guy real_6
       rect:
         serializedVersion: 2
-        x: 197
+        x: 192
         y: 0
-        width: 22
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -227,7 +227,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5cfbde89f3b74e4685ffefdf2068f35
+      spriteID: 8e929e1ecac5ca9439d8a436ff77b53d
       vertices: []
       indices: 
       edges: []
@@ -236,10 +236,10 @@ TextureImporter:
       name: main guy real_7
       rect:
         serializedVersion: 2
-        x: 229
+        x: 224
         y: 0
-        width: 22
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,7 +247,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e39ff2a91f283143a18a92cc1baba68
+      spriteID: a851d9cd55a14b141a106f1caf141184
       vertices: []
       indices: 
       edges: []
@@ -256,10 +256,10 @@ TextureImporter:
       name: main guy real_8
       rect:
         serializedVersion: 2
-        x: 259
+        x: 256
         y: 0
-        width: 24
-        height: 31
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,7 +267,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 264513e8b14b26141bfb63b1b5203eb0
+      spriteID: 78efacc588fc9774083e51d7058f7169
       vertices: []
       indices: 
       edges: []

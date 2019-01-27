@@ -17,14 +17,17 @@ public class Enemy_Movement : MonoBehaviour
         
         MovingRight = false;
         MovingLeft = true;
+
+        Right = gameObject.transform.GetChild(0);
+        Left = gameObject.transform.GetChild(1);
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         
-        Right = gameObject.transform.GetChild(0);
-        Left = gameObject.transform.GetChild(1);
+
         if (MovingLeft)
         {
             ADD= -new Vector3(Time.deltaTime * speed, 0f, 0f);

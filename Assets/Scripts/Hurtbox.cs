@@ -9,7 +9,7 @@ public class Hurtbox : MonoBehaviour
         if (Other.name == "Player")
         {
             Destroy(gameObject);
-            Other.GetComponent<Player_Movement>().MyRB.velocity= new Vector2(Other.GetComponent<Player_Movement>().MyRB.velocity.x, Other.GetComponent<Player_Movement>().JumpSpeed/1.5f);//half jump
+            //Other.GetComponent<Player_Movement>().MyRB.velocity= new Vector2(Other.GetComponent<Player_Movement>().MyRB.velocity.x, Other.GetComponent<Player_Movement>().JumpSpeed/1.5f);//half jump
         }
     }
 }
