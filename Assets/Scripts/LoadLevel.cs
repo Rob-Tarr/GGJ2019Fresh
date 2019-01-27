@@ -12,7 +12,6 @@ public class LoadLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -34,11 +33,13 @@ public class LoadLevel : MonoBehaviour
     {
         if(roomName == ("Living"))
         {
+            GameObject.FindGameObjectWithTag("Living").GetComponent<MusicClass>().StopMusic();
             SceneManager.LoadScene("03 Level 1");
         }
 
         if(roomName == ("Kitchen"))
         {
+            GameObject.FindGameObjectWithTag("Kitchen").GetComponent<MusicClass>().PlayMusic();
             SceneManager.LoadScene("05 Level 2");
         }
 

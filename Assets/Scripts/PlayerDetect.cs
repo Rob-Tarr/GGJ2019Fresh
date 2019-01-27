@@ -47,7 +47,7 @@ public class PlayerDetect : MonoBehaviour
 
             GameObject gameObject;
             gameObject = GetComponentInParent<GameObject>();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

@@ -10,7 +10,6 @@ public class LevelExit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -31,11 +30,13 @@ public class LevelExit : MonoBehaviour
     {
         if (roomName == ("Living Room"))
         {
+            GameObject.FindGameObjectWithTag("Living_L").GetComponent<MusicClass>().StopMusic();
             SceneManager.LoadScene("02 Living Room");
         }
 
         if (roomName == ("Kitchen"))
         {
+            GameObject.FindGameObjectWithTag("Kitchen_L").GetComponent<MusicClass>().PlayMusic();
             SceneManager.LoadScene("04 Kitchen");
         }
 
