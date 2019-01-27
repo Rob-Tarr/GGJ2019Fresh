@@ -11,7 +11,9 @@ public class Player_Movement : MonoBehaviour
     [Header("Advanced")]
     public float DragFactor=2f;//used to slow down to max speed rather than instantaneous
     public float WallJumpVerticalSpeed=10, WallJumpHorizontalSpeed=20;
-    
+
+    public GameObject attackCollider;
+
     private int JumpCount; //used to count remaining mid-air jumps
     private bool IsGrounded,IsWalled,IsMoving; //booleans for jump logic
     private Rigidbody2D MyRB; //player rigidbody
@@ -98,5 +100,21 @@ public class Player_Movement : MonoBehaviour
             }
         }
         WallCheck.position = gameObject.transform.position + WallCheckDist * Input.GetAxisRaw("Horizontal");
+
+        Attack();
+    }
+
+    private void Attack()
+    {
+        if(Input.GetButtonDown("Fire"))
+        {
+            myAnimator.SetBool("isAttacking", true);
+            attackCollider.SetActive(true);
+        }
+        if (Input.GetButtonUp("Fire"))
+        {
+            myAnimator.SetBool("isAttacking", false);
+            attackCollider.SetActive(true);
+        }
     }
 }
