@@ -5,24 +5,24 @@ using UnityEngine;
 public class Player_Movement : MonoBehaviour
 {
     [Header("Basics")]
-    public int MidAirJumps=1;//initialized mid-air jumps when grounded
-    public float JumpSpeed=15,MaxRunSpeed=20, MaxWalkSpeed=10, RunForce=40;
+    public int MidAirJumps = 1;//initialized mid-air jumps when grounded
+    public float JumpSpeed = 15, MaxRunSpeed = 20, MaxWalkSpeed = 10, RunForce = 40;
 
     [Header("Advanced")]
-    public float DragFactor=2f;//used to slow down to max speed rather than instantaneous
-    public float WallJumpVerticalSpeed=10, WallJumpHorizontalSpeed=20;
+    public float DragFactor = 2f;//used to slow down to max speed rather than instantaneous
+    public float WallJumpVerticalSpeed = 10, WallJumpHorizontalSpeed = 20;
 
     public GameObject attackCollider;
 
     private int JumpCount; //used to count remaining mid-air jumps
-    private bool IsGrounded,IsWalled,IsMoving; //booleans for jump logic
+    private bool IsGrounded, IsWalled, IsMoving; //booleans for jump logic
     private Rigidbody2D MyRB; //player rigidbody
     private Animator myAnimator;
-    private Transform GroundCheck,WallCheck; //child transforms used for booleans
+    private Transform GroundCheck, WallCheck; //child transforms used for booleans
     private Vector3 WallCheckDist; //allows one wallcheck to check BOTH sides
 
-    private bool PreviousFaceRight,FacingRight;
-    
+    private bool PreviousFaceRight, FacingRight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +39,7 @@ public class Player_Movement : MonoBehaviour
     void FixedUpdate()
     {
         //Direction Facing
-        if (Input.GetAxisRaw("Horizontal")>0)
+        if (Input.GetAxisRaw("Horizontal") > 0)
         {
             gameObject.transform.localScale = new Vector3(1f, 1f, 0f);
         }
@@ -50,8 +50,8 @@ public class Player_Movement : MonoBehaviour
         //Booleans
 
         IsGrounded = Physics2D.Linecast(gameObject.transform.position, GroundCheck.position, LayerMask.GetMask("Ground")).normal == Vector2.up;//Check to see if ground  is directly below player for groundcheck
-        IsWalled =Mathf.Abs( Vector2.Dot(Physics2D.Linecast(gameObject.transform.position, WallCheck.position, LayerMask.GetMask("Wall")).normal, Vector2.left) )== 1f; //Normal is horizontal
-        IsMoving = Mathf.Abs(MyRB.velocity.x) >1f || !IsGrounded;
+        IsWalled = Mathf.Abs(Vector2.Dot(Physics2D.Linecast(gameObject.transform.position, WallCheck.position, LayerMask.GetMask("Wall")).normal, Vector2.left)) == 1f; //Normal is horizontal
+        IsMoving = Mathf.Abs(MyRB.velocity.x) > 1f || !IsGrounded;
         myAnimator.SetBool("isRunning", IsMoving);
 
 
@@ -62,7 +62,7 @@ public class Player_Movement : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump") && (IsGrounded || JumpCount > 0)) //Either grounded or has remaining mid-air jumps
         {
-            
+
             if (!IsGrounded)
             {
 
@@ -71,15 +71,15 @@ public class Player_Movement : MonoBehaviour
             MyRB.velocity = new Vector2(MyRB.velocity.x, JumpSpeed); //If jumpforce is used, force may be applied multiple frames
 
         }
-        if(IsWalled && Input.GetButtonDown("Jump"))
+        if (IsWalled && Input.GetButtonDown("Jump"))
         {
-            MyRB.velocity = new Vector2(-WallJumpHorizontalSpeed* Input.GetAxisRaw("Horizontal"), WallJumpVerticalSpeed);
+            MyRB.velocity = new Vector2(-WallJumpHorizontalSpeed * Input.GetAxisRaw("Horizontal"), WallJumpVerticalSpeed);
         }
 
         // HORIZONTAL MOVEMENT LOGIC
         MyRB.AddForce(Vector2.right * RunForce * Input.GetAxisRaw("Horizontal"));
-        
-        
+
+
         if (Input.GetButton("Dash")) //sprinting
         {
             if (Mathf.Abs(MyRB.velocity.x) > MaxRunSpeed)//clamp run speed to max
@@ -106,7 +106,7 @@ public class Player_Movement : MonoBehaviour
 
     private void Attack()
     {
-        if(Input.GetButtonDown("Fire"))
+        if (Input.GetButtonDown("Fire"))
         {
             myAnimator.SetBool("isAttacking", true);
             attackCollider.SetActive(true);

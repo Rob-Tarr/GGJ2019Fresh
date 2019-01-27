@@ -11,7 +11,6 @@ public class Fall : MonoBehaviour
     {
         myAudioSource = FindObjectOfType<AudioSource>();
     }
-
     void OnTriggerEnter2D(Collider2D Other)
     {
         if (Other.name == "Player")
@@ -19,6 +18,7 @@ public class Fall : MonoBehaviour
             myAudioSource.Stop();
             Destroy(myAudioSource.gameObject);
             Application.LoadLevel(Application.loadedLevel);
+
         }
     }
 }
