@@ -1420,7 +1420,6 @@ GameObject:
   - component: {fileID: 1824192566}
   - component: {fileID: 1824192567}
   - component: {fileID: 1824192569}
-  - component: {fileID: 1824192568}
   m_Layer: 0
   m_Name: Bottom
   m_TagString: Untagged
@@ -1468,18 +1467,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1824192568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1824192565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4d25f1870ff7a4429625fbc65d77178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1824192569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1997,17 +1984,17 @@ PrefabInstance:
     - target: {fileID: 8988505940827087764, guid: 28b77ca00c76a34488a95f066974c06f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8988505940827087764, guid: 28b77ca00c76a34488a95f066974c06f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.81
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8988505940827087764, guid: 28b77ca00c76a34488a95f066974c06f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8988505940827087764, guid: 28b77ca00c76a34488a95f066974c06f,
         type: 3}
@@ -2052,7 +2039,7 @@ PrefabInstance:
     - target: {fileID: 8988505940827087765, guid: 28b77ca00c76a34488a95f066974c06f,
         type: 3}
       propertyPath: orthographic size
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28b77ca00c76a34488a95f066974c06f, type: 3}
