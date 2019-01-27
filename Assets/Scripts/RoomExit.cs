@@ -35,17 +35,21 @@ public class RoomExit : MonoBehaviour
         if (roomName == ("Bedroom"))
         {
             GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().StopMusic();
+            Destroy(GameObject.FindGameObjectWithTag("Music"));
             SceneManager.LoadScene("02 Living Room");  
         }
 
         if (roomName == ("Living"))
         {
             GameObject.FindGameObjectWithTag("Living").GetComponent<MusicClass>().StopMusic();
+            Destroy(GameObject.FindGameObjectWithTag("Living"));
             SceneManager.LoadScene("04 Kitchen");
         }
 
         if (roomName == ("Kitchen"))
         {
+            GameObject.FindGameObjectWithTag("Kitchen").GetComponent<MusicClass>().StopMusic();
+            Destroy(GameObject.FindGameObjectWithTag("Kitchen"));
             SceneManager.LoadScene("06 Laundry Room");
         }
 
