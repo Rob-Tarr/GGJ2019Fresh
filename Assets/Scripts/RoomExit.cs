@@ -59,6 +59,16 @@ public class RoomExit : MonoBehaviour
             endFade = FindObjectOfType<Animator>();
             endFade.SetTrigger("endFade");
         }
+
+        if (roomName == ("Controls"))
+        {
+            SceneManager.LoadScene(0);
+        }
+
+        if (roomName == ("Credits"))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
 }
