@@ -19,7 +19,6 @@ public class Controls : MonoBehaviour
 
     private void OnMouseUp()
     {
-        GameObject.FindObjectOfType<AudioSource>().GetComponent<MusicClass>().StopMusic();
         SceneManager.LoadScene(7);
 
     }

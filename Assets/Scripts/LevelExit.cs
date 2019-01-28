@@ -41,7 +41,6 @@ public class LevelExit : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Kitchen_L").GetComponent<MusicClass>().StopMusic();
             Destroy(GameObject.FindGameObjectWithTag("Kitchen_L"));
-            GameObject.FindObjectOfType<DishManager>().RemoveDishes();
             SceneManager.LoadScene("04 Kitchen");
         }
 
