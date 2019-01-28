@@ -12,6 +12,7 @@ TagManager:
   - Kitchen
   - Music
   - Attack
+  - Dish
   layers:
   - Default
   - TransparentFX

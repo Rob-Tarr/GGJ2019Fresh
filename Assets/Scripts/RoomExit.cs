@@ -53,11 +53,12 @@ public class RoomExit : MonoBehaviour
 
         if (roomName == ("End"))
         {
-            GameObject.FindGameObjectWithTag("Kitchen").GetComponent<MusicClass>().StopMusic();
-            Destroy(GameObject.FindGameObjectWithTag("Kitchen"));
             Animator endFade;
             endFade = FindObjectOfType<Animator>();
             endFade.SetTrigger("endFade");
+            GameObject.FindGameObjectWithTag("Kitchen").GetComponent<MusicClass>().StopMusic();
+            Destroy(GameObject.FindGameObjectWithTag("Kitchen"));
+
         }
 
         if (roomName == ("Controls"))

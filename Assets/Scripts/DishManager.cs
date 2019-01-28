@@ -6,16 +6,17 @@ public class DishManager : MonoBehaviour
 {
     public bool flag;
     // Start is called before the first frame update
-    public void setFlag(bool f)
+    private void Awake()
     {
-        flag = f;
+        DontDestroyOnLoad(transform.gameObject);
     }
+
 
     void Start()
     {
         if (GameObject.FindObjectOfType<DishManager>()) Destroy(this);
         flag = true;
-        DontDestroyOnLoad(transform.gameObject);
+        
     }
 
     // Update is called once per frame
@@ -28,5 +29,8 @@ public class DishManager : MonoBehaviour
     }
 
 
-
+    public void RemoveDishes()
+    {
+        flag = false;
+    }
 }

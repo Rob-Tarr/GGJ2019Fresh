@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class LevelExit : MonoBehaviour
 {
     [SerializeField] string roomName;
+
+    DishManager myDishes;
     
     // Start is called before the first frame update
     void Start()
@@ -39,7 +41,7 @@ public class LevelExit : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Kitchen_L").GetComponent<MusicClass>().StopMusic();
             Destroy(GameObject.FindGameObjectWithTag("Kitchen_L"));
-            GameObject.FindObjectOfType<DishManager>().setFlag(false);
+            GameObject.FindObjectOfType<DishManager>().RemoveDishes();
             SceneManager.LoadScene("04 Kitchen");
         }
 
