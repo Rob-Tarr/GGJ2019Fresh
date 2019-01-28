@@ -21,7 +21,7 @@ public class Player_Movement : MonoBehaviour
     private Transform GroundCheck, WallCheck; //child transforms used for booleans
     private Vector3 WallCheckDist; //allows one wallcheck to check BOTH sides
 
-    private bool PreviousFaceRight, FacingRight;
+    private bool PreviousFaceRight, FacingRight, isAttacking;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +34,7 @@ public class Player_Movement : MonoBehaviour
         JumpCount = 0; //intialize jumps to 0
         WallCheckDist = WallCheck.position - gameObject.transform.position; //initial distance of wallcheck maintained
         FacingRight = true;
+        isAttacking = false;
     }
 
     // Update is called once per frame
@@ -60,6 +61,7 @@ public class Player_Movement : MonoBehaviour
         if (IsGrounded)
         {
             JumpCount = MidAirJumps;//restore jumps
+            
         }
         if (Input.GetButtonDown("Jump") && (IsGrounded || JumpCount > 0)) //Either grounded or has remaining mid-air jumps
         {
@@ -69,6 +71,7 @@ public class Player_Movement : MonoBehaviour
 
                 JumpCount -= 1;//mid air jump used
             }
+            
             MyRB.velocity = new Vector2(MyRB.velocity.x, JumpSpeed); //If jumpforce is used, force may be applied multiple frames
 
         }
@@ -107,15 +110,17 @@ public class Player_Movement : MonoBehaviour
 
     private void Attack()
     {
-        if (Input.GetButtonDown("Fire"))
+        if (Input.GetButtonDown("Fire") && isAttacking == false)
         {
             myAnimator.SetBool("isAttacking", true);
             attackCollider.SetActive(true);
+            isAttacking = true;
         }
-        if (Input.GetButtonUp("Fire"))
+        if (Input.GetButtonUp("Fire") && isAttacking == true)
         {
             myAnimator.SetBool("isAttacking", false);
             attackCollider.SetActive(false);
+            isAttacking = false;
         }
     }
 }
