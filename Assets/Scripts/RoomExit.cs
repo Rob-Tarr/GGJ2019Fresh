@@ -63,11 +63,15 @@ public class RoomExit : MonoBehaviour
 
         if (roomName == ("Controls"))
         {
+            GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().StopMusic();
+            Destroy(GameObject.FindGameObjectWithTag("Music"));
             SceneManager.LoadScene(0);
         }
 
         if (roomName == ("Credits"))
         {
+            GameObject.FindGameObjectWithTag("Credits").GetComponent<MusicClass>().StopMusic();
+            Destroy(GameObject.FindGameObjectWithTag("Credits"));
             SceneManager.LoadScene(0);
         }
     }

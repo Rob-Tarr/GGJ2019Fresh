@@ -55,6 +55,7 @@ MonoBehaviour:
   DragFactor: 0
   WallJumpVerticalSpeed: 0
   WallJumpHorizontalSpeed: 0
+  attackCollider: {fileID: 0}
 --- !u!50 &2307993365189110698
 Rigidbody2D:
   serializedVersion: 4

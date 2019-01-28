@@ -13,6 +13,7 @@ TagManager:
   - Music
   - Attack
   - Dish
+  - Credits
   layers:
   - Default
   - TransparentFX
